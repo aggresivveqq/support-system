@@ -1,0 +1,215 @@
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+.Python
+pythonenv*
+
+# Build / packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python installers
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test / coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+.cache/
+
+# Type checking / linting
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.pylint.d/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# =============================================================================
+# FastAPI / Uvicorn / local runtime
+# =============================================================================
+*.pid
+*.sock
+uvicorn.log
+gunicorn.log
+
+# =============================================================================
+# Environment / secrets
+# =============================================================================
+.env
+.env.*
+!.env.example
+*.local
+
+# =============================================================================
+# Node / Vue / Vite frontend
+# =============================================================================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.vite-inspect/
+frontend/.cache/
+frontend/coverage/
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Package manager stores / metadata
+.npm/
+.pnpm-store/
+.yarn/
+!.yarn/patches/
+!.yarn/plugins/
+!.yarn/releases/
+!.yarn/sdks/
+!.yarn/versions/
+
+# =============================================================================
+# ML models / generated artifacts
+# =============================================================================
+models/*.joblib
+models/*.pkl
+models/*.pickle
+models/*.onnx
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.bin
+models/*.safetensors
+*.joblib
+*.pkl
+*.pickle
+
+# Keep model directory if it becomes empty
+!models/.gitkeep
+
+# =============================================================================
+# Data / databases
+# =============================================================================
+data/logops.sqlite3
+data/logops.sqlite3-*
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Ignore generated/intermediate data, keep raw sample logs
+data/processed/
+data/interim/
+data/external/
+data/tmp/
+data/temp/
+data/cache/
+
+# =============================================================================
+# Logs
+# =============================================================================
+*.log
+logs/
+!data/raw/*.log
+
+# =============================================================================
+# Docker
+# =============================================================================
+.docker/
+docker-compose.override.yml
+*.dockerfile.local
+
+# =============================================================================
+# OS files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# =============================================================================
+# Editors / IDEs
+# =============================================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# =============================================================================
+# Temporary files
+# =============================================================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+
+# =============================================================================
+# Archives
+# =============================================================================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# =============================================================================
+# Misc
+# =============================================================================
+.eslintcache
+.stylelintcache

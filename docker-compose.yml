@@ -1,0 +1,28 @@
+name: logops-decision-support
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL:-openai/gpt-4o-mini}
+      APP_SITE_URL: ${APP_SITE_URL:-http://localhost:8080}
+      APP_SITE_NAME: ${APP_SITE_NAME:-LogOps Decision Support}
+      MODEL_PATH: /app/models/log_severity.joblib
+      DATA_DIR: /app/data/raw
+      DB_PATH: /app/data/logops.sqlite3
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
